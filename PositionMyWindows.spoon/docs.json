@@ -1,0 +1,380 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Accessible variable to adjust the logging level",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Accessible variable to adjust the logging level"
+        ],
+        "desc" : "Accessible variable to adjust the logging level",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "def" : "PositionMyWindows.logger"
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "desc" : "With this Spoon you will be able to define Application window locations\/sizes per Monitor name.",
+    "Constructor" : [
+
+    ],
+    "doc" : "With this Spoon you will be able to define Application window locations\/sizes per Monitor name.\nOfficial homepage for more info and documentation:\n[https:\/\/github.com\/cmaahs\/position-my-windows-spoon](https:\/\/github.com\/cmaahs\/position-my-windows-spoon)",
+    "Method" : [
+      {
+        "doc" : "Expose a routine that the user can call to output screen resolution information to the console window.",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Expose a routine that the user can call to output screen resolution information to the console window."
+        ],
+        "desc" : "Expose a routine that the user can call to output screen resolution information to the console window.",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:DisplayScreenInfo()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "DisplayScreenInfo",
+        "def" : "PositionMyWindows:DisplayScreenInfo()"
+      },
+      {
+        "doc" : "Called for each appinfo object and used to position the application window defined.\n\nParameters:\n * appinfo - Struct containing screen, app, and positioning info.",
+        "parameters" : [
+          " * appinfo - Struct containing screen, app, and positioning info."
+        ],
+        "stripped_doc" : [
+          "Called for each appinfo object and used to position the application window defined.",
+          ""
+        ],
+        "desc" : "Called for each appinfo object and used to position the application window defined.",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:position(appinfo)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "position",
+        "def" : "PositionMyWindows:position(appinfo)"
+      },
+      {
+        "doc" : "Binds hotkeys for CacadeWindows\n\nParameters:\n * applist - A table containing hotkey details for defined applications:\n\nA configuration example:\n``` lua\nhs.loadSpoon(\"PositionMyWindows\")\nspoon.PositionMyWindows:bindHotkeys({\nw = { \n            key = { hyper, \"w\" }, \n            app = { \n                    { name = 'Slack',   prefs = { \n                                                  { monitor = 'DELL U3818DW', position = {0,0,1312,1518} },\n                                                  { monitor = 'C32F391'     , position = {0,0,1400,1057} },\n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,1027} },                                              \n                                                }, \n                    },\n                    { name = 'OneNote', prefs = { \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },\n                                                  { monitor = 'Color LCD'   , position = {100,0,1200,800} },\n                                                },\n                    },\n                    { name = 'MacDown', prefs = {\n                                                  { monitor = 'Color LCD'   , position = {0,23,1680,973} },\n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },\n                                                },\n                    },\n                  },\n              pathapp = {\n                          { path = '\/Applications\/Firefox-GMail.app', baseprocess = 'firefox', prefs = { \n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },\n                                                  { monitor = 'DELL U3818DW', position = {300,0,1300,1500} },\n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-JIRA.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-Git.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-Azure.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-AWSProd.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-AWSQA.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                        },      \n    }    \n})\nspoon.PositionMyWindows._logger.level = 3\n```",
+        "parameters" : [
+          " * applist - A table containing hotkey details for defined applications:",
+          "",
+          "A configuration example:",
+          "``` lua",
+          "hs.loadSpoon(\"PositionMyWindows\")",
+          "spoon.PositionMyWindows:bindHotkeys({",
+          "w = { ",
+          "            key = { hyper, \"w\" }, ",
+          "            app = { ",
+          "                    { name = 'Slack',   prefs = { ",
+          "                                                  { monitor = 'DELL U3818DW', position = {0,0,1312,1518} },",
+          "                                                  { monitor = 'C32F391'     , position = {0,0,1400,1057} },",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,1027} },                                              ",
+          "                                                }, ",
+          "                    },",
+          "                    { name = 'OneNote', prefs = { ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },",
+          "                                                  { monitor = 'Color LCD'   , position = {100,0,1200,800} },",
+          "                                                },",
+          "                    },",
+          "                    { name = 'MacDown', prefs = {",
+          "                                                  { monitor = 'Color LCD'   , position = {0,23,1680,973} },",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },",
+          "                                                },",
+          "                    },",
+          "                  },",
+          "              pathapp = {",
+          "                          { path = '\/Applications\/Firefox-GMail.app', baseprocess = 'firefox', prefs = { ",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },",
+          "                                                  { monitor = 'DELL U3818DW', position = {300,0,1300,1500} },",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-JIRA.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-Git.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-Azure.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-AWSProd.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-AWSQA.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                        },      ",
+          "    }    ",
+          "})",
+          "spoon.PositionMyWindows._logger.level = 3",
+          "```"
+        ],
+        "stripped_doc" : [
+          "Binds hotkeys for CacadeWindows",
+          ""
+        ],
+        "desc" : "Binds hotkeys for CacadeWindows",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:bindHotkeys()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bindHotkeys",
+        "def" : "PositionMyWindows:bindHotkeys()"
+      },
+      {
+        "doc" : "Currently does nothing (implemented so that treating this Spoon like others won't cause errors).",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Currently does nothing (implemented so that treating this Spoon like others won't cause errors)."
+        ],
+        "desc" : "Currently does nothing (implemented so that treating this Spoon like others won't cause errors).",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:init()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "init",
+        "def" : "PositionMyWindows:init()"
+      }
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "Accessible variable to adjust the logging level",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Accessible variable to adjust the logging level"
+        ],
+        "desc" : "Accessible variable to adjust the logging level",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "def" : "PositionMyWindows.logger"
+      },
+      {
+        "doc" : "Expose a routine that the user can call to output screen resolution information to the console window.",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Expose a routine that the user can call to output screen resolution information to the console window."
+        ],
+        "desc" : "Expose a routine that the user can call to output screen resolution information to the console window.",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:DisplayScreenInfo()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "DisplayScreenInfo",
+        "def" : "PositionMyWindows:DisplayScreenInfo()"
+      },
+      {
+        "doc" : "Binds hotkeys for CacadeWindows\n\nParameters:\n * applist - A table containing hotkey details for defined applications:\n\nA configuration example:\n``` lua\nhs.loadSpoon(\"PositionMyWindows\")\nspoon.PositionMyWindows:bindHotkeys({\nw = { \n            key = { hyper, \"w\" }, \n            app = { \n                    { name = 'Slack',   prefs = { \n                                                  { monitor = 'DELL U3818DW', position = {0,0,1312,1518} },\n                                                  { monitor = 'C32F391'     , position = {0,0,1400,1057} },\n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,1027} },                                              \n                                                }, \n                    },\n                    { name = 'OneNote', prefs = { \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },\n                                                  { monitor = 'Color LCD'   , position = {100,0,1200,800} },\n                                                },\n                    },\n                    { name = 'MacDown', prefs = {\n                                                  { monitor = 'Color LCD'   , position = {0,23,1680,973} },\n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },\n                                                },\n                    },\n                  },\n              pathapp = {\n                          { path = '\/Applications\/Firefox-GMail.app', baseprocess = 'firefox', prefs = { \n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },\n                                                  { monitor = 'DELL U3818DW', position = {300,0,1300,1500} },\n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-JIRA.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-Git.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-Azure.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-AWSProd.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                          { path = '\/Applications\/Firefox-AWSQA.app', baseprocess = 'firefox', prefs = {                                                   \n                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },\n                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  \n                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              \n                                                }, \n                          },\n                        },      \n    }    \n})\nspoon.PositionMyWindows._logger.level = 3\n```",
+        "parameters" : [
+          " * applist - A table containing hotkey details for defined applications:",
+          "",
+          "A configuration example:",
+          "``` lua",
+          "hs.loadSpoon(\"PositionMyWindows\")",
+          "spoon.PositionMyWindows:bindHotkeys({",
+          "w = { ",
+          "            key = { hyper, \"w\" }, ",
+          "            app = { ",
+          "                    { name = 'Slack',   prefs = { ",
+          "                                                  { monitor = 'DELL U3818DW', position = {0,0,1312,1518} },",
+          "                                                  { monitor = 'C32F391'     , position = {0,0,1400,1057} },",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,1027} },                                              ",
+          "                                                }, ",
+          "                    },",
+          "                    { name = 'OneNote', prefs = { ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },",
+          "                                                  { monitor = 'Color LCD'   , position = {100,0,1200,800} },",
+          "                                                },",
+          "                    },",
+          "                    { name = 'MacDown', prefs = {",
+          "                                                  { monitor = 'Color LCD'   , position = {0,23,1680,973} },",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {100,0,1200,800} },",
+          "                                                },",
+          "                    },",
+          "                  },",
+          "              pathapp = {",
+          "                          { path = '\/Applications\/Firefox-GMail.app', baseprocess = 'firefox', prefs = { ",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },",
+          "                                                  { monitor = 'DELL U3818DW', position = {300,0,1300,1500} },",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-JIRA.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-Git.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-Azure.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-AWSProd.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                          { path = '\/Applications\/Firefox-AWSQA.app', baseprocess = 'firefox', prefs = {                                                   ",
+          "                                                  { monitor = 'DELL U3818DW', position = {290,0,1920,1360} },",
+          "                                                  { monitor = 'C32F391'     , position = {615,0,1300,950} },                                                  ",
+          "                                                  { monitor = 'Color LCD'   , position = {0,0,1200,800} },                                              ",
+          "                                                }, ",
+          "                          },",
+          "                        },      ",
+          "    }    ",
+          "})",
+          "spoon.PositionMyWindows._logger.level = 3",
+          "```"
+        ],
+        "stripped_doc" : [
+          "Binds hotkeys for CacadeWindows",
+          ""
+        ],
+        "desc" : "Binds hotkeys for CacadeWindows",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:bindHotkeys()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "bindHotkeys",
+        "def" : "PositionMyWindows:bindHotkeys()"
+      },
+      {
+        "doc" : "Currently does nothing (implemented so that treating this Spoon like others won't cause errors).",
+        "parameters" : [
+
+        ],
+        "stripped_doc" : [
+          "Currently does nothing (implemented so that treating this Spoon like others won't cause errors)."
+        ],
+        "desc" : "Currently does nothing (implemented so that treating this Spoon like others won't cause errors).",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:init()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "init",
+        "def" : "PositionMyWindows:init()"
+      },
+      {
+        "doc" : "Called for each appinfo object and used to position the application window defined.\n\nParameters:\n * appinfo - Struct containing screen, app, and positioning info.",
+        "parameters" : [
+          " * appinfo - Struct containing screen, app, and positioning info."
+        ],
+        "stripped_doc" : [
+          "Called for each appinfo object and used to position the application window defined.",
+          ""
+        ],
+        "desc" : "Called for each appinfo object and used to position the application window defined.",
+        "notes" : [
+
+        ],
+        "signature" : "PositionMyWindows:position(appinfo)",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "position",
+        "def" : "PositionMyWindows:position(appinfo)"
+      }
+    ],
+    "Command" : [
+
+    ],
+    "name" : "PositionMyWindows"
+  }
+]
