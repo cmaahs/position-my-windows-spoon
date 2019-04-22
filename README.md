@@ -39,7 +39,7 @@ then
 else
     echo 'hs.window.animationDuration = 0.3' >> ~/.hammerspoon/init.lua
 fi
-if grep -Fxq 'spoon.PositionMyWindows:bindHotkeys({s = { key = { hyper, "s" }, app = { { name = "Slack"   prefs = { { monitor = "DELL U3818DW", position = {0,0,1312,1518} }, { monitor = "Color LCD"   , position = {0,0,1200,1027} }, }, }, }, }, m = { key = { hyper, "m" }, app = { { name = "MacDown",   prefs = { { monitor = "Color LCD", position = {0,23,1680,973} }, { monitor = "DELL U3818DW", position = {290,0,1920,1360} }, }, }, }, } })' ~/.hammerspoon/init.lua
+if grep -Fxq 'spoon.PositionMyWindows:bindHotkeys({s = { key = { hyper, "s" }, app = { { name = "Slack", prefs = { { monitor = "DELL U3818DW", position = {0,0,1312,1518} }, { monitor = "Color LCD"   , position = {0,0,1200,1027} }, }, }, }, }, m = { key = { hyper, "m" }, app = { { name = "MacDown",   prefs = { { monitor = "Color LCD", position = {0,23,1680,973} }, { monitor = "DELL U3818DW", position = {290,0,1920,1360} }, }, }, }, } })' ~/.hammerspoon/init.lua
 then
     echo "line already exists."
 else
